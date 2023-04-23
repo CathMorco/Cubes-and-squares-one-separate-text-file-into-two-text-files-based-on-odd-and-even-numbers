@@ -21,13 +21,33 @@ col_dir =[[-1,1,1]]
 def_col = [[120,120,240]]
 
 #Opens and reads each individual line in the text file
-
+with open("myfile.txt") as file:
+    lines = [line.rstrip() for line in file]
 
 #Divides the list into even and odd numbers
-
+evens = []
+odds = []
+for i in lines:
+    i=int(i)
+    if i % 2 == 0:
+        i *= i
+        evens.append(i)
+    else:
+        i *= i*i
+        odds.append(i)
 
 #Tranfers the even and odd list of numbers into 2 separate text files
+with open("even numbers.txt", "w") as even:
+    even.write("\n".join(str(i) for i in evens))
 
+with open("even numbers.txt", "r") as even:    
+    evenlines = [line.rstrip() for line in even]
+
+with open("odd numbers.txt", "w") as odd:
+    odd.write("\n".join(str(i) for i in odds))
+
+with open("odd numbers.txt", "r") as odd:    
+    oddlines = [line.rstrip() for line in odd]
 
 
 #Creates the main program
