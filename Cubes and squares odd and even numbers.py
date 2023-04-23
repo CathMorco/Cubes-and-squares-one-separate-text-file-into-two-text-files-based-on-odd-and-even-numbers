@@ -143,3 +143,5 @@ def mainProgram(lines,texts,title):
         pygame.display.update()
 
 #Runs the program for the 2 text files
+mainProgram(evenlines,evenlines,"Even Numbers")
+mainProgram(oddlines,oddlines,"Odd Numbers")
