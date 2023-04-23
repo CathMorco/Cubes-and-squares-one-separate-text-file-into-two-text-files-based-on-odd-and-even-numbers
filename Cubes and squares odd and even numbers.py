@@ -2,19 +2,23 @@
 import pygame
 
 #Sets the value for the width and height of the display screen
-
+W, H = 800, 600
 
 #Creates the display screen
-
+display = pygame.Surface ((W, H))
+screen = pygame.display.set_mode ((W, H))
+clock = pygame.time.Clock()
 
 #RGB example values
-
+black = (0,0,0)
+white = (255,255,255)
 
 #The rate of change in colors
-
+col_spd = 1
 
 #The color directory & its values
-
+col_dir =[[-1,1,1]]
+def_col = [[120,120,240]]
 
 #Opens and reads each individual line in the text file
 
